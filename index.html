@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starfall — Space Patrol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-label="Starfall arcade game">
+      <header class="hud">
+        <div class="brand"><span class="brand-mark">✦</span><span>STARFALL</span></div>
+        <div class="hud-item"><span>SECTOR</span><strong id="sector">01</strong></div>
+        <div class="hud-item score"><span>SCORE</span><strong id="score">000000</strong></div>
+        <div class="hud-item"><span>HI-SCORE</span><strong id="highScore">000000</strong></div>
+        <button class="sound-button" id="soundButton" aria-label="Toggle sound">◖))</button>
+      </header>
+
+      <section class="playfield-wrap">
+        <canvas id="game" width="960" height="600" aria-label="Arcade spaceship battlefield"></canvas>
+        <div class="scanlines"></div>
+        <div class="message" id="message">
+          <p class="eyebrow">DEEP SPACE PATROL</p>
+          <h1>DEFEND THE<br /><em>LAST LIGHT.</em></h1>
+          <p class="instructions">MOVE <kbd>←</kbd><kbd>→</kbd> &nbsp; / &nbsp; FIRE <kbd>SPACE</kbd></p>
+          <button id="startButton">START MISSION <span>→</span></button>
+        </div>
+        <div class="pause-card hidden" id="pauseCard">PAUSED<br /><small>PRESS P TO RESUME</small></div>
+      </section>
+
+      <footer>
+        <span><i></i> ENGINE ONLINE</span>
+        <span>ARROW KEYS / A D TO MOVE &nbsp;•&nbsp; SPACE TO FIRE &nbsp;•&nbsp; P TO PAUSE</span>
+        <span class="lives">HULL <b id="lives">◆ ◆ ◆</b></span>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
